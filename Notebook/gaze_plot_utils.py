@@ -183,7 +183,7 @@ def animate_gaze_plot_with_background(
     img_height, img_width = bg_img.shape[:2]
 
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.imshow(bg_img, extent=[0, img_width, 0, img_height], origin='upper')
+    ax.imshow(bg_img, extent=[0, img_width, 0, img_height], origin='lower')
     scat = ax.scatter([], [], s=50, c='red')
     trail, = ax.plot([], [], 'bo-', alpha=0.5)
 
