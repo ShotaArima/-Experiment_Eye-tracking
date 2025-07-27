@@ -1,0 +1,11 @@
+services:
+  gaze_plot:
+    build: .
+    volumes:
+      - ./src/:/app/
+      - ./加工データ csv/:/data/
+      - ./question/:/data/pic/
+      - ./output/:/output/
+    tty: true
+    working_dir: /app/
+    command: bash
