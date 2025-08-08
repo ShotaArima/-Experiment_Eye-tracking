@@ -3,7 +3,7 @@ import pandas as pd
 
 def switch_category(category: int):
     if category == 1:
-        category_order =  [ "question_statement", "question_graph", "opt-1", "opt-2", "opt-3", "opt-4"]
+        category_order =  ["question_statement", "question_graph", "opt-1", "opt-2", "opt-3", "opt-4"]
     elif category == 2:
         category_order = ["question_statement", "question_graph", "opt-1", "opt-2", "opt-3", "opt-4"]
     elif category == 3:
@@ -14,6 +14,7 @@ def switch_category(category: int):
 
 def plot_gaze_area_transition(df: pd.DataFrame,
                               category: int,
+                              save_path: str,
                               time_col: str = 'Eyetracker timestamp',
                               x_col: str = 'Gaze point X',
                               y_col: str = 'Gaze point Y',
@@ -56,7 +57,7 @@ def plot_gaze_area_transition(df: pd.DataFrame,
 
     # 3. 折れ線グラフ
     fig, ax = plt.subplots(figsize=figsize)
-    ax.plot(df_plot[time_col], df_plot['area_code'], marker='o', markersize=2, linewidth=1)
+    ax.plot(df_plot[time_col] - df_plot[time_col].iloc[0], df_plot['area_code'], marker='o', markersize=2, linewidth=1)
 
     # 4. 軸ラベル・タイトル設定
     ax.set_yticks(range(len(category_order)))
@@ -66,4 +67,9 @@ def plot_gaze_area_transition(df: pd.DataFrame,
     ax.set_title("Gaze Area Transition Over Time")
 
     ax.grid(axis='y', linestyle='--', alpha=0.5)
-    plt.show()
+
+    if save_path:
+        plt.savefig(save_path)
+        plt.close()
+    else:
+        plt.slow()

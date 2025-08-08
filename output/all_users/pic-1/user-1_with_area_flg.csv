@@ -1,5 +1,5 @@
-Eyetracker timestamp,Gaze point X,Gaze point Y,Gaze point left X,Gaze point left Y,Gaze point right X,Gaze point right Y,Validity left,Validity right,area_flg
-6514731673.0,1616.0,575.0,1646.0,566.0,1586.0,583.0,Valid,Valid,opt-2
+Eyetracker timestamp,   Gaze point X,   Gaze point Y,   Gaze point left X,  Gaze point left Y,  Gaze point right X, Gaze point right Y, Validity left,  Validity right, area_flg
+6514731673.0,           1616.0,         575.0,          1646.0,             566.0,              1586.0,             583.0,              Valid,          Valid,          opt-2
 6514748580.0,1616.0,623.0,1665.0,603.0,1568.0,644.0,Valid,Valid,opt-2
 6514764705.0,1573.0,647.0,1613.0,642.0,1533.0,652.0,Valid,Valid,opt-1
 6514781639.0,1611.0,570.0,1655.0,543.0,1568.0,598.0,Valid,Valid,opt-2
